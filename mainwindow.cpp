@@ -30,8 +30,15 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->saveButton, SIGNAL(clicked()), this, SLOT(saveGame()));
     connect(ui->loadButton, SIGNAL(clicked()), this, SLOT(loadGame()));
 
-    ui->mainLayout->setStretchFactor(ui->gameLayout, 8);
-    ui->mainLayout->setStretchFactor(ui->setLayout, 2);
+    ui->startButton->setProperty("type", "borderless");
+    ui->stopButton->setProperty("type", "borderless");
+    ui->clearButton->setProperty("type", "borderless");
+    ui->saveButton->setProperty("type", "borderless");
+    ui->loadButton->setProperty("type", "borderless");
+    ui->colorButton->setProperty("type", "borderless");
+    ui->quitBtn->setProperty("type", "borderless");
+    ui->mainVerticalLayout->setStretchFactor(ui->gameLayout, 8);
+    ui->mainVerticalLayout->setStretchFactor(ui->setLayout, 2);
     ui->gameLayout->addWidget(game);
 }
 
@@ -113,4 +120,9 @@ void MainWindow::selectMasterColor()
     QPixmap icon(16, 16);
     icon.fill(color);
     ui->colorButton->setIcon( QIcon(icon) );
+}
+
+void MainWindow::on_quitBtn_clicked()
+{
+    qApp->quit();
 }

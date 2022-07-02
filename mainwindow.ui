@@ -15,10 +15,26 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="topMargin">
+     <number>6</number>
+    </property>
     <item>
-     <layout class="QHBoxLayout" name="mainLayout">
+     <layout class="QVBoxLayout" name="mainVerticalLayout">
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <layout class="QVBoxLayout" name="gameLayout"/>
+      </item>
+      <item>
+       <widget class="Line" name="line_6">
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
       </item>
       <item>
        <layout class="QVBoxLayout" name="setLayout">
@@ -26,26 +42,114 @@
          <layout class="QHBoxLayout" name="controlLayout">
           <item>
            <widget class="QPushButton" name="startButton">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding: 10px</string>
+            </property>
             <property name="text">
              <string>Start</string>
             </property>
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="stopButton">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding: 10px</string>
+            </property>
             <property name="text">
              <string>Stop</string>
             </property>
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line_2">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="clearButton">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding: 10px</string>
+            </property>
             <property name="text">
              <string>Clear</string>
             </property>
            </widget>
           </item>
+          <item>
+           <widget class="Line" name="line_9">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="quitBtn">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding: 10px</string>
+            </property>
+            <property name="text">
+             <string>Quit</string>
+            </property>
+           </widget>
+          </item>
          </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_7">
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="label">
@@ -97,16 +201,56 @@
          </widget>
         </item>
         <item>
+         <widget class="Line" name="line_4">
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="fileLayout">
           <item>
            <widget class="QPushButton" name="loadButton">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding: 10px</string>
+            </property>
             <property name="text">
              <string>Load</string>
             </property>
            </widget>
           </item>
           <item>
+           <widget class="Line" name="line_3">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="saveButton">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding: 10px</string>
+            </property>
             <property name="text">
              <string>Save</string>
             </property>
@@ -115,24 +259,31 @@
          </layout>
         </item>
         <item>
-         <widget class="QPushButton" name="colorButton">
-          <property name="text">
-           <string>Select color for cells</string>
+         <widget class="Line" name="line_5">
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
           </property>
          </widget>
         </item>
         <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+         <widget class="QPushButton" name="colorButton">
+          <property name="font">
+           <font>
+            <family>Inter</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
+          <property name="styleSheet">
+           <string notr="true">padding: 10px</string>
           </property>
-         </spacer>
+          <property name="text">
+           <string>Select color for cells</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
